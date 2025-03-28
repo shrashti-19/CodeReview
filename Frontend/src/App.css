@@ -14,7 +14,7 @@ main{
   width: 100%;
   padding: 1.5rem;
   display : flex;
-  gap : 1 rem
+  gap : 1rem
 }
 main .left, 
 main .right{
@@ -23,6 +23,8 @@ main .right{
   border-radius: 0.7rem;
 }
 main .left{
+  height: auto;
+  min-height: 100%;
   background-color: black;
   position: relative;
 }
@@ -47,5 +49,27 @@ main .left .review{
  user-select: none;
 }
 main .right{
+  height: auto;
+  min-height: 100%;
   background-color: #343434;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.review-content{
+  max-height: 100%;
+  width: 100%;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
 }
