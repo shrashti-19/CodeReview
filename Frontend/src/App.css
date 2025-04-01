@@ -1,55 +1,104 @@
-*{
+/* * {
   margin: 0%;
-  padding : 0%;
+  padding: 0%;
   box-sizing: border-box;
 }
+
 html,
 body,
-#root{
+#root {
   height: 100%;
   width: 100%;
 }
-main{
+
+main {
   height: 100%;
   width: 100%;
   padding: 1.5rem;
-  display : flex;
-  gap : 1rem
+  display: flex;
+  gap: 1rem;
 }
+
 main .left, 
-main .right{
+main .right {
   height: 100%;
   flex-basis: 50%;
   border-radius: 0.7rem;
 }
-main .left{
-  height: auto;
+
+main .left {
   min-height: 100%;
-  background-color: black;
-  position: relative;
+  background-color: #121212; /* Darker background for better contrast */
+  /* position: relative;
+} */
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
-.left .code , .code pre, .code pre code{
+
+html,
+body,
+#root {
   height: 100%;
   width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+main .left, 
+main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+}
+
+main .left {
+  min-height: 100%;
+  background-color: #121212;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: hidden; /* Prevent overflow of the entire container */
+}
+
+.left .code, .code pre, .code pre code {
+  width: 100%;
+  height: 80vh;
   margin: 0;
   border-radius: 0.7rem;
-  background-color: #0c0c0c;
+  background-color: #1e1e1e;
+  color: #dcdcdc;
+  overflow-y: auto; /* Enable scrolling if the code overflows */
+  
 }
-main .left .review{
- position: absolute;
- bottom : 1rem;
- right: 1rem;
- background-color: rgb(219, 219, 255) ;
- color: #000000;
- padding: 0.5rem 2rem;
- font-weight: 500;
- cursor: pointer;
- border-radius: 0.7rem;
- -webkit-user-select: none;
- user-select: none;
+
+main .left .review {
+  background-color: #ff8c32;
+  color: #000000;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 0.7rem;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: background-color 0.3s ease-in-out;
+  align-self: flex-end;
 }
-main .right{
-  height: auto;
+
+main .left .review:hover {
+  background-color: #e87e18;
+}
+
+main .right {
   min-height: 100%;
   background-color: #343434;
   padding: 1rem;
@@ -57,13 +106,13 @@ main .right{
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  height: 100%;
   overflow-y: auto;
-  overflow-wrap: break-word;
   white-space: pre-wrap;
+  color: white;
+  font-size: 1rem;
 }
 
-.review-content{
+.review-content {
   max-height: 100%;
   width: 100%;
   color: white;
@@ -72,4 +121,45 @@ main .right{
   padding: 1rem;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 0.5rem;
+}
+
+.language-selector,
+.review-level-selector {
+  margin-bottom: 10px;
+}
+
+.language-selector label,
+.review-level-selector label {
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.language-selector select,
+.review-level-selector select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #2c2c2c;
+  color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.language-selector select:focus,
+.review-level-selector select:focus {
+  outline: none;
+  border-color: #ff8c32;
+  background-color: #333;
+}
+
+.left {
+  padding: 20px;
+}
+
+.select-wrapper {
+  margin-top: 10px;
 }
