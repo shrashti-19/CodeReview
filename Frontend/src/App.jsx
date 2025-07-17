@@ -10,7 +10,7 @@ import 'prismjs/components/prism-java';
 
 
 function App() {
-  const [count, setCount] = useState(0)
+
   const [code, setCode] = useState(`
       function sum(){
         return 1+1
@@ -114,8 +114,8 @@ function App() {
 }
 
 //dummy function
-function sum(){
-  return 1+1;
-}
+// function sum(){
+//   return 1+1;
+// }
 
 export default App
